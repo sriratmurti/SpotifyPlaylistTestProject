@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddSongPageViewController" customModule="AssesmentSpotifyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="aHZ-1H-IL1" id="ag6-4w-a2D"/>
+                <outlet property="backButton" destination="kxH-1a-h1p" id="ls0-Yf-ag4"/>
+                <outlet property="libraryTitleLabel" destination="ErR-qf-SZH" id="iRw-aT-PP0"/>
+                <outlet property="songCountLabel" destination="uuO-dq-6wH" id="ZL4-WJ-aBC"/>
+                <outlet property="songTableView" destination="Gfw-wF-ylM" id="0Cv-wc-VLq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxH-1a-h1p">
+                    <rect key="frame" x="14" y="76" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="GMf-eh-O4s"/>
+                        <constraint firstAttribute="width" constant="20" id="jri-mI-Zop"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <connections>
+                        <action selector="backBtnAction:" destination="-1" eventType="touchUpInside" id="A7c-k3-0vK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHZ-1H-IL1">
+                    <rect key="frame" x="359" y="76" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="AHd-t8-mw7"/>
+                        <constraint firstAttribute="width" constant="20" id="G7R-2o-q9y"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="add_icon"/>
+                    <connections>
+                        <action selector="addSongBtnAction:" destination="-1" eventType="touchUpInside" id="RQe-HP-GnK"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErR-qf-SZH">
+                    <rect key="frame" x="14" y="127" width="84" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuO-dq-6wH">
+                    <rect key="frame" x="13.999999999999996" y="157" width="36.666666666666657" height="14"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gfw-wF-ylM">
+                    <rect key="frame" x="0.0" y="246" width="393" height="572"/>
+                    <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aHZ-1H-IL1" secondAttribute="trailing" constant="14" id="0tg-wg-jfT"/>
+                <constraint firstItem="kxH-1a-h1p" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="17" id="6Fz-cj-Y2Y"/>
+                <constraint firstItem="ErR-qf-SZH" firstAttribute="leading" secondItem="kxH-1a-h1p" secondAttribute="leading" id="Gfh-97-FVb"/>
+                <constraint firstItem="uuO-dq-6wH" firstAttribute="top" secondItem="ErR-qf-SZH" secondAttribute="top" constant="30" id="Jx6-5x-OKj"/>
+                <constraint firstItem="Gfw-wF-ylM" firstAttribute="top" secondItem="uuO-dq-6wH" secondAttribute="bottom" constant="75" id="Kgf-sC-XTq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gfw-wF-ylM" secondAttribute="bottom" id="Mbv-mB-6sZ"/>
+                <constraint firstItem="uuO-dq-6wH" firstAttribute="leading" secondItem="ErR-qf-SZH" secondAttribute="leading" id="kae-jg-bJQ"/>
+                <constraint firstItem="kxH-1a-h1p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="krL-fr-ZsV"/>
+                <constraint firstItem="aHZ-1H-IL1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="17" id="ltP-4N-SBM"/>
+                <constraint firstItem="Gfw-wF-ylM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="puQ-UH-nHt"/>
+                <constraint firstItem="ErR-qf-SZH" firstAttribute="top" secondItem="kxH-1a-h1p" secondAttribute="bottom" constant="31" id="z0r-aK-mdn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gfw-wF-ylM" secondAttribute="trailing" id="zO8-xW-mTP"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="add_icon" width="26" height="26"/>
+    </resources>
+</document>

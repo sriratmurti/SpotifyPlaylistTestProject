@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchSongPageViewController" customModule="AssesmentSpotifyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="recentSearchLabel" destination="6MZ-0D-Yix" id="yVI-bT-xZC"/>
+                <outlet property="searchBarView" destination="Ae3-nm-9tt" id="OSG-QQ-zvV"/>
+                <outlet property="searchResultTableView" destination="S6i-R1-ePE" id="LgC-Cb-OLg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ae3-nm-9tt">
+                    <rect key="frame" x="0.0" y="83" width="393" height="56"/>
+                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Qe4-7W-LXy"/>
+                    </connections>
+                </searchBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Searches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-0D-Yix">
+                    <rect key="frame" x="14.000000000000007" y="163" width="113.66666666666669" height="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S6i-R1-ePE">
+                    <rect key="frame" x="12" y="210" width="369" height="608"/>
+                    <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6MZ-0D-Yix" firstAttribute="top" secondItem="Ae3-nm-9tt" secondAttribute="bottom" constant="24" id="LY4-2G-5nR"/>
+                <constraint firstItem="Ae3-nm-9tt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="RpG-Xs-eFf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="S6i-R1-ePE" secondAttribute="bottom" id="a84-XL-S9z"/>
+                <constraint firstItem="S6i-R1-ePE" firstAttribute="top" secondItem="6MZ-0D-Yix" secondAttribute="bottom" constant="30" id="hih-mE-4xP"/>
+                <constraint firstItem="S6i-R1-ePE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="iIR-Ua-Tus"/>
+                <constraint firstItem="Ae3-nm-9tt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n6j-wZ-UaJ"/>
+                <constraint firstItem="Ae3-nm-9tt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tBw-V7-s5O"/>
+                <constraint firstItem="6MZ-0D-Yix" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="xk3-Kj-zdW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S6i-R1-ePE" secondAttribute="trailing" constant="12" id="zMT-Dz-0W6"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+</document>

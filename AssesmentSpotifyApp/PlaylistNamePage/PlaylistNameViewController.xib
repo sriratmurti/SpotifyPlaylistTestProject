@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistNameViewController" customModule="AssesmentSpotifyApp" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmButton" destination="pOT-hl-jcc" id="YzY-oH-J2D"/>
+                <outlet property="nameTextField" destination="1Zn-Zt-2UI" id="aAj-DW-pIV"/>
+                <outlet property="titleLabel" destination="Z2Q-sC-E4P" id="682-fp-efD"/>
+                <outlet property="underlineView" destination="mbx-5z-lfC" id="K2u-ra-iE3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Your Playlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2Q-sC-E4P">
+                    <rect key="frame" x="120.66666666666669" y="248.00000000000003" width="152" height="20.333333333333343"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Zn-Zt-2UI">
+                    <rect key="frame" x="30" y="338.33333333333331" width="333" height="18.666666666666686"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbx-5z-lfC">
+                    <rect key="frame" x="60" y="362" width="273" height="2"/>
+                    <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="6s3-dh-X7K"/>
+                        <constraint firstAttribute="width" constant="273" id="AbE-wM-7FB"/>
+                        <constraint firstAttribute="height" constant="2" id="P8X-M3-o0g"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOT-hl-jcc">
+                    <rect key="frame" x="151.66666666666666" y="409" width="90" height="34"/>
+                    <color key="backgroundColor" red="0.11764705882352941" green="0.84313725490196079" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="  Confirm  ">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmBtnAction:" destination="-1" eventType="touchUpInside" id="qeT-uJ-83Y"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pOT-hl-jcc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4wp-zU-DBf"/>
+                <constraint firstItem="mbx-5z-lfC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="93I-Z3-YjM"/>
+                <constraint firstItem="pOT-hl-jcc" firstAttribute="top" secondItem="mbx-5z-lfC" secondAttribute="bottom" constant="45" id="T4s-8K-KWl"/>
+                <constraint firstItem="mbx-5z-lfC" firstAttribute="top" secondItem="1Zn-Zt-2UI" secondAttribute="bottom" constant="5" id="WOC-iE-ikj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Zn-Zt-2UI" secondAttribute="trailing" constant="30" id="ckC-VA-qI3"/>
+                <constraint firstItem="1Zn-Zt-2UI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="d3c-Uv-ocx"/>
+                <constraint firstItem="Z2Q-sC-E4P" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gJR-6U-0IU"/>
+                <constraint firstItem="1Zn-Zt-2UI" firstAttribute="top" secondItem="Z2Q-sC-E4P" secondAttribute="bottom" constant="70" id="iDv-9Q-rXY"/>
+                <constraint firstItem="Z2Q-sC-E4P" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="189" id="sh2-VL-PTl"/>
+            </constraints>
+            <point key="canvasLocation" x="-5" y="20"/>
+        </view>
+    </objects>
+</document>
